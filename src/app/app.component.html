@@ -1,0 +1,43 @@
+<div [class]="themeClass">
+    <div class="app-content">
+         <md-toolbar color="primary">
+            <span>Custom Toolbar</span>
+            <span class="example-spacer"></span>
+            <md-icon class="example-icon">favorite</md-icon>
+        </md-toolbar>
+
+        <md-card>
+            <md-card-content>
+                <!-- <form>
+                    <p>What kind of user are you?</p>
+                    <md-select ng-model="selectedUserType" (change)="changeTheme($event.target.value)">
+                        <md-option *ngFor="let u of userTypes"> {{u}} </md-option>
+                    </md-select>
+                </form> -->
+                <div class="row">
+                    <div>
+                        <p class="pokemon-label">What Pokemon do you prefer?</p>
+                        <div>
+                            <select ng-model="selectedPokemon" (change)="changeTheme($event.target.value)">
+                                <option *ngFor="let p of pokemon">{{p}}</option>
+                            </select>
+                        </div> 
+                    </div>
+                    <div>
+                        <div class="pokemon-image"></div>
+                    </div>
+                </div>
+
+                
+            </md-card-content>
+            <md-card-actions>
+                <button md-button>FLAT</button>
+                <button md-raised-button>RAISED</button>
+                <button md-raised-button color="primary">PRIMARY RAISED</button>
+                <button md-raised-button color="accent">ACCENT RAISED</button>
+            </md-card-actions>
+        </md-card>
+    </div>
+</div>
+
+

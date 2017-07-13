@@ -1,0 +1,18 @@
+@import '~@angular/material/theming';
+
+@mixin shared-theme($theme, $themeName) {
+    $primary: map-get($theme, primary);
+
+    @warn "$themeName: #{$themeName}";
+
+    .pokemon-label {
+        color: mat-color($primary);
+    }
+
+    .pokemon-image {
+        border: 1px solid mat-color($primary);
+        background-image: url("assets/img/" + $themeName + "-logo.png");
+        width: 250px;
+        height: 236px;
+    }
+}

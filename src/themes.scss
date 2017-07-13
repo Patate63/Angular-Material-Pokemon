@@ -1,0 +1,8 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+@import './assets/themes/pikachu.scss';
+@import './assets/themes/rondoudou.scss';
+@import './assets/themes/bulbizarre.scss';
+
+

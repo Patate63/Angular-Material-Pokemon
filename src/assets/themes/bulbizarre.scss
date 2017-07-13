@@ -1,0 +1,13 @@
+@import './_shared.scss';
+
+$bulbizarre-theme-primary: mat-palette($mat-green);
+$bulbizarre-theme-accent:  mat-palette($mat-lime);
+$bulbizarre-theme-warn:    mat-palette($mat-red);
+$bulbizarre-theme:         mat-light-theme($bulbizarre-theme-primary, $bulbizarre-theme-accent, $bulbizarre-theme-warn);
+
+@mixin bulbizarre-theme($theme) {
+  @include shared-theme($theme, "bulbizarre");
+}
+
+@include angular-material-theme($bulbizarre-theme);
+@include bulbizarre-theme($bulbizarre-theme);

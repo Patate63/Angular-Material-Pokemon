@@ -1,0 +1,15 @@
+@import './_shared.scss';
+
+.pikachu-theme {
+  $pikachu-theme-primary: mat-palette($mat-yellow);
+  $pikachu-theme-accent:  mat-palette($mat-amber);
+  $pikachu-theme-warn:    mat-palette($mat-deep-orange);
+  $pikachu-theme:         mat-dark-theme($pikachu-theme-primary, $pikachu-theme-accent, $pikachu-theme-warn);
+
+  @mixin pikachu-theme($theme) {
+      @include shared-theme($theme, "pikachu");
+  }
+
+  @include angular-material-theme($pikachu-theme);
+  @include pikachu-theme($pikachu-theme);
+}

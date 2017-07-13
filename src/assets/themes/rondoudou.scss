@@ -1,0 +1,15 @@
+@import './_shared.scss';
+
+.rondoudou-theme {
+  $rondoudou-theme-primary: mat-palette($mat-purple);
+  $rondoudou-theme-accent:  mat-palette($mat-pink);
+  $rondoudou-theme-warn:    mat-palette($mat-deep-purple);
+  $rondoudou-theme:         mat-dark-theme($rondoudou-theme-primary, $rondoudou-theme-accent, $rondoudou-theme-warn);
+
+  @mixin rondoudou-theme($theme) {
+    @include shared-theme($theme, "rondoudou");
+  }
+
+  @include angular-material-theme($rondoudou-theme);
+  @include rondoudou-theme($rondoudou-theme);
+}
