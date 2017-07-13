@@ -1,6 +1,16 @@
 @import '~@angular/material/theming';
 
 @mixin shared-theme($theme, $themeName) {
+    .flex-container {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+    .flex-item {
+        flex: 0 0 auto;
+        padding: 10px;
+    }
+
     $primary: map-get($theme, primary);
 
     @warn "$themeName: #{$themeName}";
